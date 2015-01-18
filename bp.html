@@ -813,10 +813,6 @@ figure figcaption {
           and uniform system of identification will be required to enable data
           persistency and reuse, being a crucial element for the process of data
           sharing and connecting.</p>
-        <p>Just by adopting a common identification system we are making
-          possible basic identification and comparison processes by the
-          different stakeholders in a reliable way. These will be essential
-          pre-conditions for proper data management and to facilitate reuse.</p>
         
         <!-- begin of Data Identification BP -->
         <div class="practice">
@@ -826,18 +822,10 @@ figure figcaption {
             be clearly associated with an unique identifier that represents it. </p>
           <section class="axioms">
             <p class="subhead">Why</p>
-            <p>The architecture of the World Wide Web [[WEBARCH]] is based on
-              links between resources based on globally unique identifers. They
-              can identify people, places and concepts just as much as the more
-              familiar URL identifiers for Web pages, images etc. HTTP IRIs, the
-              internationalized version of URIs, themsleves a super-set of URLs,
-              are a fundamental aspect of the Web.</p>
-            <p>IRIs should not change over time so that references remain valid.</p>
             <p>Just by adopting a common identification system we are making possible basic data identification and comparison processes by the different stakeholders in a reliable way. These will be essential pre-conditions for proper data management and to facilitate reuse.</p>
           </section>
           <section class="outcome">  
             <p class="subhead">Intended Outcome</p>
-            <p>Data <em class="rfc2119">must</em> be discoverable and citable.</p>
             <p>A number of basic requirements <em class="rfc2119">should</em> be fulfilled during the definition of an identification system:</p>
             <ol>
               <li>Ensure that any data resource can be identified by its unique identifier.</li>
@@ -850,18 +838,11 @@ figure figcaption {
           <section class="how">
             <p class="subhead">Possible Approach to Implementation</p>
             <p>The architecture of the World Wide Web [[WEBARCH]] is based on
-              links between resources based on a single global identification system for this purpose: the [[URI]]. A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource
-              [[!RFC3986]]. One should aim for compact mnemonic URI: human and machine friendly. The function of URI is to identify and it 
-              does not need to carry sematics, though mnemonics: is recommended. </p>
-
-             <p> Internationalized Resource Identifiers (IRIs) [[!RFC3987]] should be used when needed. 
-               The use of URI or IRIs depends on the intended audience. For global a audience one should use language and 
-               cultural neutral URIs; for local a audience one could use IRIs.</p>
+              links between resources based on a single global identification system for this purpose: the [[URI]]. 
+                URIs are a cornerstone of Web architecture, providing identification 
+	            	for people, places or concepts that is common across the Web.</p>
+              </p>
             
-            <pre title="URI and IRIs" class="highlight example">
-              http://example.com/ä¸­å›½                  # For Chinese speaker: good mnemonic - non-Chinese speakers: bad mnemonic
-              http://example.com/china                 # For Chinese speaker: acceptable - non-Chinese speakers: better
-            </pre>
             <p>Some best practices to adopt while using URIs as a data identification system are:</p> 
         		<ul>
               <li>Associate every data resource with an unique identifier using a representational URI.</li>
@@ -879,7 +860,6 @@ figure figcaption {
           </section>
           <section class="test">
             <p class="subhead">How to Test</p>
-            <p>Apply the design rules.</p>
             <p>Check that there is a documented scheme of web identifiers for the data in question. For any of the existing identifiers test that the associated data can always be retrieved by means of its identifier and in a technologically neutral way.</p>
           </section>
           <section class="ucr">
